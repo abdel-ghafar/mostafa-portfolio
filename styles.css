@@ -121,3 +121,126 @@
     font-size: 16px;
   }
 }
+/* === Footer visibility and contact improvements === */
+
+footer {
+  background: var(--navy);
+  color: #d7e0e5;
+  padding: 54px 0 24px;
+  border-top: 1px solid #2d3f4b;
+  font-size: 16px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-identity strong {
+  color: #ffffff;
+  font-family: Manrope, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.footer-identity p {
+  color: #aebcc5;
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 0 15px;
+  color: #e7eef2;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible,
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: var(--navy);
+  background: var(--lime);
+  border-color: var(--lime);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #93a4ae;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  footer {
+    padding-top: 42px;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .footer-links a,
+  .back-to-top {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .footer-bottom {
+    margin-top: 25px;
+  }
+}
